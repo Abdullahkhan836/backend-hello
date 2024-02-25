@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const port = 3000
+require('dotenv').config()
+const port = process.env.PORT
 
 
 //middleware
@@ -58,5 +59,5 @@ app.put('/api/v1/users/:id', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${process.env.PORT}`);
 })
